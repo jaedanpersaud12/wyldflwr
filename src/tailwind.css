@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "Plus Jakarta Sans";
+		font-weight: 400;
+		font-style: normal;
+		src: url("https://cdn.rareblocks.xyz/collection/clarity/fonts/PlusJakartaSans-Regular.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-family: "Plus Jakarta Sans";
+		font-weight: 400;
+		font-style: italic;
+		src: url("https://cdn.rareblocks.xyz/collection/clarity/fonts/PlusJakartaSans-Italic.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-family: "Plus Jakarta Sans";
+		font-weight: 500;
+		font-style: normal;
+		src: url("https://cdn.rareblocks.xyz/collection/clarity/fonts/PlusJakartaSans-Medium.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-family: "Plus Jakarta Sans";
+		font-weight: 500;
+		font-style: italic;
+		src: url("https://cdn.rareblocks.xyz/collection/clarity/fonts/PlusJakartaSans-MediumItalic.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-family: "Plus Jakarta Sans";
+		font-weight: 600;
+		font-style: normal;
+		src: url("https://cdn.rareblocks.xyz/collection/clarity/fonts/PlusJakartaSans-SemiBold.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-family: "Plus Jakarta Sans";
+		font-weight: 700;
+		font-style: normal;
+		src: url("https://cdn.rareblocks.xyz/collection/clarity/fonts/PlusJakartaSans-Bold.woff2") format("woff2");
+	}
+	@font-face {
+		font-family: 'volund';
+		src:  url('./build/fonts/volund.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+	
+	}
+	@font-face {
+		font-family: 'recoleta-regular';
+		src:  url('./build/fonts/recoleta-regular.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+	
+	}
+
+}
+@layer components {
+}
+@layer utilities {
+}

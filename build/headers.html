@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+  <!-- INTER FONT -->
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- ALPINE JS -->
+  <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- PAGE TITLE -->
+  <title>
+    Header / RareBlocks
+  </title>
+
+</head>
+
+<body class="bg-gray-200">
+
+  <!-- START WRAPPER -->
+  <div class="space-y-10">
+
+    <!-- START HEADER 1 -->
+    <header class="py-4 bg-white" x-data="{expanded: false}">
+      <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <div class="flex-shrink-0">
+            <a href="#" title="" class="flex">
+              <img class="" src="https://cdn.rareblocks.xyz/collection/clarity/images/logo.svg" alt="">
+            </a>
+          </div>
+
+          <div class="flex lg:hidden">
+            <button type="button" class="text-gray-900" @click="expanded = !expanded"
+              :aria-expanded="expanded">
+              <span x-show="!expanded" aria-hidden="true">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </span>
+
+              <span x-show="expanded" aria-hidden="true">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <nav class="hidden lg:items-center lg:ml-16 lg:mr-auto lg:space-x-16 lg:flex">
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Features
+            </a>
+
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Pricing
+            </a>
+
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Automation
+            </a>
+          </nav>
+
+          <nav class="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10">
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Customer Login
+            </a>
+
+            <a href="#" title="" class="inline-flex items-center justify-center px-6 py-2 text-base font-bold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-xl hover:bg-gray-600 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+              Sign up
+            </a>
+          </nav>
+        </div>
+
+        <nav x-show="expanded" x-collapse>
+          <div class="px-1 py-8">
+            <div class="grid gap-y-7">
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Features
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Pricing
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Automation
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Customer Login
+              </a>
+
+              <a href="#" title="" class="inline-flex items-center justify-center px-6 py-2 text-base font-bold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-xl hover:bg-gray-600 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+                Sign up
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- END HEADER 1 -->
+
+    <!-- START HEADER 2 -->
+    <header class="py-4 bg-white" x-data="{expanded: false}">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <div class="flex-shrink-0">
+            <a href="#" title="" class="flex">
+              <img class="" src="https://cdn.rareblocks.xyz/collection/clarity/images/logo.svg" alt="">
+            </a>
+          </div>
+
+          <div class="flex lg:hidden">
+            <button type="button" class="text-gray-900" @click="expanded = !expanded"
+              :aria-expanded="expanded">
+              <span x-show="!expanded" aria-hidden="true">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </span>
+
+              <span x-show="expanded" aria-hidden="true">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <nav class="hidden lg:flex lg:items-center lg:justify-center lg:space-x-12">
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Experts
+            </a>
+
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Community Groups
+            </a>
+
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Support
+            </a>
+          </nav>
+
+          <nav class="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10">
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Login
+            </a>
+
+            <a href="#" title="" class="inline-flex items-center justify-center px-5 py-2 text-base font-semibold leading-7 text-gray-900 transition-all duration-200 bg-transparent border border-gray-900 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 hover:text-white focus:bg-gray-900 focus:text-white" role="button">
+              Join community
+            </a>
+          </nav>
+        </div>
+
+        <nav x-show="expanded" x-collapse>
+          <div class="px-1 py-8">
+            <div class="grid gap-y-7">
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Experts
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Community Groups
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Support
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Login
+              </a>
+
+              <a href="#" title="" class="inline-flex items-center justify-center px-5 py-2 text-base font-semibold leading-7 text-gray-900 transition-all duration-200 bg-transparent border border-gray-900 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 hover:text-white focus:bg-gray-900 focus:text-white" role="button">
+                Join community
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- END HEADER 2 -->
+
+    <!-- START HEADER 3 -->
+    <header class="py-4 bg-white" x-data="{expanded: false}">
+      <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <div class="flex-shrink-0">
+            <a href="#" title="" class="flex">
+              <img class="" src="https://cdn.rareblocks.xyz/collection/clarity/images/logo.svg" alt="">
+            </a>
+          </div>
+
+          <div class="flex lg:hidden">
+            <button type="button" class="text-gray-900" @click="expanded = !expanded"
+              :aria-expanded="expanded">
+              <span x-show="!expanded" aria-hidden="true">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </span>
+
+              <span x-show="expanded" aria-hidden="true">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <nav class="hidden lg:flex lg:items-center lg:justify-center lg:space-x-16">
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Features
+            </a>
+
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Pricing
+            </a>
+
+            <a href="#" title="" class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+              Support
+            </a>
+          </nav>
+
+          <nav class="hidden lg:flex">
+            <a href="#" title="" class="inline-flex items-center justify-center px-6 py-2 text-base font-bold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded hover:bg-gray-600 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+              Try for free
+            </a>
+          </nav>
+        </div>
+
+        <nav x-show="expanded" x-collapse>
+          <div class="px-1 py-8">
+            <div class="grid gap-y-7">
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Features
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Pricing
+              </a>
+
+              <a href="#" title="" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
+                Support
+              </a>
+
+              <a href="#" title="" class="inline-flex items-center justify-center px-6 py-2 text-base font-bold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded hover:bg-gray-600 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+                Try for free
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- END HEADER 3 -->
+  </div>
+  <!-- END WRAPPER -->
+
+</body>
+
+</html>
