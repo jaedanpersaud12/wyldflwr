@@ -19,7 +19,9 @@ module.exports = {
 				teal: colors.teal,
 				orange: colors.orange,
 				rose: colors.rose,
-				"wf-pink": '#F16278'
+				"wf-pink": '#F16278',
+				"wf-peach": '#EFB8A8',
+				"wf-black": '#341018'
 			},
 		},
 	},
