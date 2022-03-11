@@ -11,6 +11,7 @@ module.exports = {
 			vol: ["volund"],
 			rec: ["recoleta"]
 		},
+		
 
 		extend: {
 			colors: {
@@ -18,6 +19,7 @@ module.exports = {
 				teal: colors.teal,
 				orange: colors.orange,
 				rose: colors.rose,
+				"wf-pink": '#F16278'
 			},
 		},
 	},
