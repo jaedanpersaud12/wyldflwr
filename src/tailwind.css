@@ -40,15 +40,15 @@
     }
     @font-face {
         font-family: 'volund';
-        src: url('./public/fonts/volund.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
+        src: url('../public/fonts/Volund.woff2') format('woff2');
     }
     @font-face {
         font-family: 'recoleta-regular';
-        src: url('./public/fonts/recoleta-regular.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
+        src: url('../public/fonts/Recoleta-Regular.woff2') format('woff2');
     }
 }
 

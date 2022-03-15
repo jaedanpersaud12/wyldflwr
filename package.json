@@ -5,7 +5,7 @@
     "author": "Sahil Vhora",
     "scripts": {
         "watch": "npx tailwindcss -i ./src/tailwind.css -o ./build/css/main.css -w",
-        "build": "NODE_ENV=production npx tailwindcss -i ./build/src/tailwind.css -o ./build/css/main.css --minify"
+        "build": "NODE_ENV=production npx tailwindcss -i ./src/tailwind.css -o ./build/css/main.css --minify"
     },
     "keywords": [],
     "license": "ISC",

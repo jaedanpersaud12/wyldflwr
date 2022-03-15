@@ -11,8 +11,6 @@ module.exports = {
             vol: ["volund"],
             rec: ["recoleta"]
         },
-
-
         extend: {
             colors: {
                 amber: colors.amber,
