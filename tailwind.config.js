@@ -19,7 +19,13 @@ module.exports = {
                 rose: colors.rose,
                 "wf-pink": '#F16278',
                 "wf-peach": '#EFB8A8',
-                "wf-black": '#341018'
+                "wf-black": '#341018',
+                "wf-burg": '#73253E',
+                "wf-brown": '#9C555B',
+                "wf-white": '#e6d4d3',
+                "wf-light-peach": "#efe5e2",
+                "wf-print-bg": '#DFCCCB',
+                "wf-print-bg-2": '#D6A59E'
             },
         },
     },
