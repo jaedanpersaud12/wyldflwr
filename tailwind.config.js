@@ -25,7 +25,8 @@ module.exports = {
                 "wf-white": '#e6d4d3',
                 "wf-light-peach": "#efe5e2",
                 "wf-print-bg": '#DFCCCB',
-                "wf-print-bg-2": '#D6A59E'
+                "wf-print-bg-2": '#D6A59E',
+                "wf-collection-bg": "#D89D94"
             },
             backgroundImage: (theme) => ({
                 'wf-pink-bg': "url(/build/images/pale-rose-background.png)",
