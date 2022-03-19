@@ -27,6 +27,10 @@ module.exports = {
                 "wf-print-bg": '#DFCCCB',
                 "wf-print-bg-2": '#D6A59E'
             },
+            backgroundImage: (theme) => ({
+                'wf-pink-bg': "url(/build/images/pale-rose-background.png)",
+                'wf-nft-bg': "url(/build/images/wf-nft-bg.png)"
+            })
         },
     },
     variants: {
