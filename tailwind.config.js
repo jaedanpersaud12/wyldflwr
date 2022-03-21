@@ -29,8 +29,8 @@ module.exports = {
                 "wf-collection-bg": "#D89D94"
             },
             backgroundImage: (theme) => ({
-                'wf-pink-bg': "url(/build/images/pale-rose-background.png)",
-                'wf-nft-bg': "url(/build/images/wf-nft-bg.png)"
+                'wf-pink-bg': "url(../images/pale-rose-background.png)",
+                'wf-nft-bg': "url(../images/wf-nft-bg.png)"
             })
         },
     },
