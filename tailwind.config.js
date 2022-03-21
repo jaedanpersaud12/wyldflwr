@@ -30,7 +30,8 @@ module.exports = {
             },
             backgroundImage: (theme) => ({
                 'wf-pink-bg': "url(../images/pale-rose-background.png)",
-                'wf-nft-bg': "url(../images/wf-nft-bg.png)"
+                'wf-nft-bg': "url(../images/wf-nft-bg.png)",
+                'wf-divider-bg' : "url(../images/plant-background.png)"
             })
         },
     },
