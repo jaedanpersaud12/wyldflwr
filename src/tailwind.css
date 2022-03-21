@@ -42,13 +42,13 @@
         font-family: 'volund';
         font-weight: normal;
         font-style: normal;
-        src: url('./fonts/Volund.ttf') format('ttf');
+        src: url('../fonts/Volund.woff2') format('woff2');
     }
     @font-face {
         font-family: 'recoleta-regular';
         font-weight: normal;
         font-style: normal;
-        src: url('Recoleta-Regular.otf') format('otf');
+        src: url('../fonts/Recoleta-regular.woff2') format('woff2');
     }
 }
 
