@@ -34,7 +34,8 @@ module.exports = {
                 'wf-divider-bg': "url(../images/plant-background.png)",
                 'wf-lesspink': "url(../images/pale-background.png)",
                 "wf-desert": "url(../images/wearables/desert.png)",
-                "wf-header": "url(../images/header-bg.png)"
+                "wf-header": "url(../images/header-bg.png)",
+                "wf-shop": "url(../images/shop-background.png)"
             })
         },
     },

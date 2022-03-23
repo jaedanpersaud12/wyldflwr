@@ -16,6 +16,10 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- ALPINE JS -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <!-- PAGE TITLE -->
     <title>
         NFTS / WYLDFLWR
@@ -25,620 +29,643 @@
 
 <body class="bg-white">
 
-    <div class="relative overflow-x-hidden bg-none overflow-hidden">
+    <!-- START HEADER -->
+    <div class="relative overflow-x-hidden bg-wf-print-bg overflow-hidden">
 
-        <!-- START HEADER -->
-
-        <header class="relative py-4 md:py-6 z-20 bg-wf-print-bg sticky" x-data="{expanded: false}">
+        <header class="relative py-4 md:py-6 z-20" x-data="{expanded: false}">
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between">
+                    <!-- LOGO -->
                     <div class="flex-shrink-0">
                         <a href="index.html" title="" class="flex rounded outline-none">
-                            <img class="w-auto h-8 hover:opacity-80 duration-200 transition-all active:opacity-60" src="images/social media/wf-logo-burg.svg" alt="">
+                            <img class="w-auto h-8" src="images/social media/wf-logo-burg.svg" alt="">
                         </a>
                     </div>
-
+                    <!-- LOGO -->
+                    <!-- X -->
                     <div class="flex lg:hidden">
-                        <button type="button" class="" @click="expanded = !expanded" :aria-expanded="expanded">
-                            <span x-show="!expanded" aria-hidden="true">
-                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            </span>
-
-                            <span x-show="expanded" aria-hidden="true">
-                                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </span>
-                        </button>
+                        <button type="button" class="text-gray-900" @click="expanded = !expanded" :aria-expanded="expanded">
+                    <span x-show="!expanded" aria-hidden="true">
+                      <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </span>
+      
+                    <span x-show="expanded" aria-hidden="true">
+                      <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </span>
+                  </button>
                     </div>
+                    <!-- X -->
+                    <!-- MIDDLE  -->
+                    <nav class="hidden lg:flex lg:items-center lg:justify-center lg:space-x-12">
+                        <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                About
+              </a>
+                        <a href="nft-showcase.html" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                NFTS
+              </a>
+                        <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                Wearables
+              </a>
+                        <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                Clothing
+              </a>
+                    </nav>
+                    <!-- MIDDLE  -->
 
-                    <div class="hidden lg:absolute lg:inset-y-0 lg:flex lg:items-center lg:justify-center lg:space-x-12 lg:-translate-x-1/2 lg:left-1/2">
-                        <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 rounded  font-rec hover:text-opacity-70 uppercase">
-                            About
+                    <!-- SOCIAL MEDIA -->
+                    <nav class="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10">
+                        <a href="">
+                            <img src="images/social media/instagram-icon-burg.svg" class="hover:opacity-80 transition-all duration-200" alt="">
                         </a>
-                        <a href="nft-showcase.html" title="" class="text-base font-medium text-wf-burg transition-all duration-200 rounded  font-rec hover:text-opacity-70 uppercase">
-                            NFTS
+                        <a href="">
+                            <img src="images/social media/twitter-icon-burg.svg" class="hover:opacity-80 transition-all duration-200" alt="">
+
+                        </a>
+                        <a href="">
+                            <img src="images/social media/discord-icon-burg.svg" class="hover:opacity-80 transition-all duration-200" alt="">
                         </a>
 
-                        <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 rounded  font-rec hover:text-opacity-70 uppercase">
-                            Wearables
-                        </a>
-                    </div>
 
-                    <div class="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                        <div class="flex items-center space-x-12">
-                            <a href="https://www.instagram.com/wearewyldflwr/" title="" class="text-base font-medium transition-all duration-200 rounded  font-rec hover:opacity-70">
-                                <img src="images/social media/instagram-icon-burg.svg" alt=""> </a>
+                    </nav>
+                    <!-- SOCIAL MEDIA -->
 
-                            <a href="https://twitter.com/wearewyldflwr" title="" class="text-base font-medium  transition-all duration-200 rounded font-rec hover:opacity-70 ">
-                                <img src="images/social media/twitter-icon-burg.svg" alt=""> </a>
-
-                            <a href="#" title="" class="text-base font-medium  transition-all duration-200 rounded font-rec hover:opacity-70">
-                                <img src="images/social media/discord-icon-burg.svg" alt=""> </a>
-                        </div>
-                    </div>
                 </div>
+                <!--  HIDDEN -->
+                <nav x-show="expanded" x-collapse>
+                    <div class="px-1 py-8">
+                        <div class="grid gap-y-7">
+                            <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                                About
+                              </a>
+
+                            <a href="nft-showcase.html" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                                NFTS
+                              </a>
+
+                            <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                                Wearables
+                              </a>
+                            <a href="#" title="" class="text-base font-medium text-wf-burg transition-all duration-200 font-rec hover:text-opacity-80">
+                                Clothing
+                              </a>
+
+
+
+                            <a href="">
+                                <img src="images/social media/instagram-icon-burg.svg" class="hover:opacity-80 transition-all duration-200" alt="">
+                            </a>
+                            <a href="">
+                                <img src="images/social media/twitter-icon-burg.svg" class="hover:opacity-80 transition-all duration-200" alt="">
+
+                            </a>
+                            <a href="">
+                                <img src="images/social media/discord-icon-burg.svg" class="hover:opacity-80 transition-all duration-200" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </nav>
+                <!-- HIDDEN -->
+
+
             </div>
         </header>
-        <!-- END HEADER -->
+    </div>
+    <!-- END HEADER -->
 
-        <!-- START COLLECTION INTRO -->
-        <section class="py-12 bg-wf-print-bg bg-cover sm:py-16 lg:py-20">
+    <!-- START COLLECTION INTRO -->
+    <section class="py-12 bg-wf-print-bg bg-cover sm:py-16 lg:py-20">
 
-            <div class="px-8 mx-auto max-w-8xl sm:px-6 lg:px-8">
-                <div class="max-w-4xl mx-auto text-center lg:my-16">
-                    <h2 class="max-w-3xl mx-auto mt-7 text-3xl lg:text-5xl font-normal text-wf-burg font-rec">
-                        WYLD TING NFT COLLECTION
-                    </h2>
-                    <p class="max-w-5xl mx-auto mt-14 text-2xl font-normal text-wf-brown font-rec">
-                        Wyld Flwr's genesis NFT collection, "Wyld Ting," launched in September 2021, features an inspiring collaboration of Caribbean creative and tech professionals. This hybrid offering of 8 unique audiovisual loops, will guide collectors through the journey
-                        of the Wyld woman both visually and aurally. . .
-                    </p>
-                    <p class="max-w-5xl mx-auto mt-14 text-7xl font-normal text-wf-brown font-rec">
-                        15%
-                    </p>
-                    <p class="max-w-5xl mx-auto mt-14 text-2xl font-normal text-wf-brown font-rec">
-                        Of royalties earned through the sale of Wyld Ting NFTs will be contributed to the longevity of the Spöol Initiative
-                    </p>
-                    <div class="mt-9">
-                        <a href="" class="font-rec mt-9 font-bold text-wf-brown text-2xl mb-16 hover:opacity-70 transition-all duration-200">
+        <div class="px-8 mx-auto max-w-8xl sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center lg:my-16">
+                <h2 class="max-w-3xl mx-auto mt-7 text-3xl lg:text-5xl font-normal text-wf-burg font-rec">
+                    WYLD TING NFT COLLECTION
+                </h2>
+                <p class="max-w-5xl mx-auto mt-14 text-2xl font-normal text-wf-brown font-rec">
+                    Wyld Flwr's genesis NFT collection, "Wyld Ting," launched in September 2021, features an inspiring collaboration of Caribbean creative and tech professionals. This hybrid offering of 8 unique audiovisual loops, will guide collectors through the journey
+                    of the Wyld woman both visually and aurally. . .
+                </p>
+                <p class="max-w-5xl mx-auto mt-14 text-7xl font-normal text-wf-brown font-rec">
+                    15%
+                </p>
+                <p class="max-w-5xl mx-auto mt-14 text-2xl font-normal text-wf-brown font-rec">
+                    Of royalties earned through the sale of Wyld Ting NFTs will be contributed to the longevity of the Spöol Initiative
+                </p>
+                <div class="mt-9">
+                    <a href="" class="font-rec mt-9 font-bold text-wf-brown text-2xl mb-16 hover:opacity-70 transition-all duration-200">
                             Learn more about Wyld Flwr's commitment to giving back
                          </a>
-                    </div>
                 </div>
             </div>
-        </section>
-        <!-- END COLLECTION INTRO -->
-        <!-- START WILDFLOWER -->
-        <section id="wildflower" class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        WILDFLOWER
-                    </h2>
+        </div>
+    </section>
+    <!-- END COLLECTION INTRO -->
+    <!-- START WILDFLOWER -->
+    <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    WILDFLOWER
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
                 </div>
 
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Wildflower.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">1</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            You couldn’t help but notice, for what a sight it was to see a flower blooming freely, without intervention.
-                        </p>
-                    </div>
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Wildflower.mp4"></video>
                 </div>
 
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">1</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        You couldn’t help but notice, for what a sight it was to see a flower blooming freely, without intervention.
+                    </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END WILDFLOWER -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START THROUGH THE CRACKS -->
+    <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-2xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    THROUGH THE CRACKS
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Through the Cracks.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">2</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        Through the cracks she blooms, despite it all. Despite it all.
+                    </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END THROUGH THE CRACKS -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START CREATION -->
+    <section id="creation" class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    CREATION
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Creation.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">3</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        She from whom all things came. </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END CREATION -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START WYLD AND FREE -->
+    <section id="wyldandfree" class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    WYLD & FREE
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        SOLD | 0.5 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        one of one | Foundation
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Wyld and Free.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">4</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        This woman knows no bounds, no limits, physical or otherwise... </p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- END WYLD AND FREE -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START HER -->
+    <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    HER
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden" id="wildflower">
+                    <video autoplay loop muted src="images/nft-videos/Wildflower.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">5</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        The flower for whom the flowers bloom.
+                    </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END HER -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START WYLD TING -->
+    <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    WYLD TING
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Wildflower.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">6</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        Dare to be.
+                    </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END WYLD TING -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START PRESENCE -->
+    <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    PRESENCE
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Presence.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">7</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        All they could do was stand frozen in awe, captivated by the power and beauty that bloomed before them.
+                    </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END PRESENCE -->
+    <!-- START DIVIDER -->
+    <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
+    </section>
+    <!-- END DIVIDER -->
+    <!-- START INNERBLOOM -->
+    <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-xl px-8 mx-auto text-center md:px-0">
+                <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
+                    INNBERBLOOM
+                </h2>
+            </div>
+
+            <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
+                <div class="overflow-hidden my-auto text-2xl">
+                    <p class="font-rec text-white text-center">
+                        0.025 ETH
+                    </p>
+                    <p class="font-rec text-white text-center">
+                        30 Editions | OpenSea
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+                        Comes with matching Decentraland wearables
+                    </p>
+                    <br>
+                    <p class="font-rec text-white text-center">
+
+                        15% Royalties contributed to Spöol Women's Livelihood Initiative
+                    </p>
+                </div>
+
+                <div class="overflow-hidden">
+                    <video autoplay loop muted src="images/nft-videos/Innerbloom.mp4"></video>
+                </div>
+
+                <div class="overflow-hidden my-auto">
+                    <h2 class="font-rec text-white text-9xl">8</h2>
+                    <p class="font-rec pt-8 text-2xl text-white">
+                        Growing and glowing from the inside-out.
+                    </p>
+                </div>
+            </div>
+
+            <a href="https://opensea.io/collection/wyldting">
+                <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
+            </a>
+
+        </div>
+    </section>
+    <!-- END INNERBLOOM -->
+    <!-- START TEAM 1 -->
+    <section class="py-12 bg-wf-print-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-wf-brown sm:text-4xl xl:text-5xl font-rec">
+                    COLLABORATORS
+                </h2>
+            </div>
+
+            <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-20 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/Collaborators/Anya Ayoung-Chee.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Anya-Ayoung Chee
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Safia Elena Ali.jpg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Safia Elena Ali
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Andrew McIntosh.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Andrew McIntosh
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Khaffi Beckles.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Khaffi Beckles
+                    </p>
+                </div>
+            </div>
+            <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-9 text-center sm:px-0 sm:grid-cols-2 md:mt-14 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Marlon James.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Marlon James
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Naomi Cowan.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Naomi Cowan
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Rodell Warner.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Rodell Warner
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Jerome Bell
+                    </p>
+                </div>
+            </div>
+            <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-14 gap-x-8 md:grid-cols-3 gap-y-12 lg:gap-x-16 xl:gap-x-20">
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Jerome Bell
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Jerome Bell
+                    </p>
+                </div>
+
+                <div>
+                    <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
+                    <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
+                        Jerome Bell
+                    </p>
+                </div>
 
             </div>
-        </section>
-        <!-- END WILDFLOWER -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START THROUGH THE CRACKS -->
-        <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-2xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        THROUGH THE CRACKS
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Through the Cracks.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">2</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            Through the cracks she blooms, despite it all. Despite it all.
-                        </p>
-                    </div>
-                </div>
-
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
-
-            </div>
-        </section>
-        <!-- END THROUGH THE CRACKS -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START CREATION -->
-        <section id="creation" class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        CREATION
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Creation.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">3</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            She from whom all things came. </p>
-                    </div>
-                </div>
-
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
-
-            </div>
-        </section>
-        <!-- END CREATION -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START WYLD AND FREE -->
-        <section id="wyldandfree" class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        WYLD & FREE
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            SOLD | 0.5 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            one of one | Foundation
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Wyld and Free.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">4</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            This woman knows no bounds, no limits, physical or otherwise... </p>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </section>
-        <!-- END WYLD AND FREE -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START HER -->
-        <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        HER
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden" id="">
-                        <video autoplay loop muted src="images/nft-videos/Wildflower.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">5</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            The flower for whom the flowers bloom.
-                        </p>
-                    </div>
-                </div>
-
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
-
-            </div>
-        </section>
-        <!-- END HER -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START WYLD TING -->
-        <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        WYLD TING
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Wildflower.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">6</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            Dare to be.
-                        </p>
-                    </div>
-                </div>
-
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
-
-            </div>
-        </section>
-        <!-- END WYLD TING -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START PRESENCE -->
-        <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        PRESENCE
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Presence.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">7</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            All they could do was stand frozen in awe, captivated by the power and beauty that bloomed before them.
-                        </p>
-                    </div>
-                </div>
-
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
-
-            </div>
-        </section>
-        <!-- END PRESENCE -->
-        <!-- START DIVIDER -->
-        <section class="py-12 bg-wf-divider-bg sm:py-16 lg:py-16">
-        </section>
-        <!-- END DIVIDER -->
-        <!-- START INNERBLOOM -->
-        <section class="py-12 bg-wf-collection-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl px-8 mx-auto text-center md:px-0">
-                    <h2 class="text-3xl font-bold text-white tracking-widest sm:text-4xl xl:text-5xl font-rec">
-                        INNBERBLOOM
-                    </h2>
-                </div>
-
-                <div class="grid max-w-sm grid-cols-1 gap-12 mx-auto mt-8 text-center md:text-left md:mt-16 md:max-w-6xl md:grid-cols-3">
-                    <div class="overflow-hidden my-auto text-2xl">
-                        <p class="font-rec text-white text-center">
-                            0.025 ETH
-                        </p>
-                        <p class="font-rec text-white text-center">
-                            30 Editions | OpenSea
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-                            Comes with matching Decentraland wearables
-                        </p>
-                        <br>
-                        <p class="font-rec text-white text-center">
-
-                            15% Royalties contributed to Spöol Women's Livelihood Initiative
-                        </p>
-                    </div>
-
-                    <div class="overflow-hidden">
-                        <video autoplay loop muted src="images/nft-videos/Innerbloom.mp4"></video>
-                    </div>
-
-                    <div class="overflow-hidden my-auto">
-                        <h2 class="font-rec text-white text-9xl">8</h2>
-                        <p class="font-rec pt-8 text-2xl text-white">
-                            Growing and glowing from the inside-out.
-                        </p>
-                    </div>
-                </div>
-
-                <a href="https://opensea.io/collection/wyldting">
-                    <img class="mx-auto mt-8 w-12 hover:opacity-80 transition-all duration-200" src="images/social media/opensea-logo.svg" alt="">
-                </a>
-
-            </div>
-        </section>
-        <!-- END INNERBLOOM -->
-        <!-- START TEAM 1 -->
-        <section class="py-12 bg-wf-print-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold text-wf-brown sm:text-4xl xl:text-5xl font-rec">
-                        COLLABORATORS
-                    </h2>
-                </div>
-
-                <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-20 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/Collaborators/Anya Ayoung-Chee.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Anya-Ayoung Chee
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Safia Elena Ali.jpg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Safia Elena Ali
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Andrew McIntosh.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Andrew McIntosh
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Khaffi Beckles.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Khaffi Beckles
-                        </p>
-                    </div>
-                </div>
-                <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-9 text-center sm:px-0 sm:grid-cols-2 md:mt-14 gap-x-8 md:grid-cols-4 gap-y-12 lg:gap-x-16 xl:gap-x-20">
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Marlon James.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Marlon James
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Naomi Cowan.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Naomi Cowan
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Rodell Warner.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Rodell Warner
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Jerome Bell
-                        </p>
-                    </div>
-                </div>
-                <div class="grid max-w-6xl grid-cols-1 px-20 mx-auto mt-12 text-center sm:px-0 sm:grid-cols-2 md:mt-14 gap-x-8 md:grid-cols-3 gap-y-12 lg:gap-x-16 xl:gap-x-20">
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Jerome Bell
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Jerome Bell
-                        </p>
-                    </div>
-
-                    <div>
-                        <img class="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 grayscale filter" src="images/collaborators/Anya Ayoung-Chee.jpeg" alt="">
-                        <p class="mt-5 text-lg font-bold text-wf-brown sm:text-xl sm:mt-8 font-rec">
-                            Jerome Bell
-                        </p>
-                    </div>
-
-                </div>
 
 
 
 
-            </div>
-        </section>
-        <!-- END TEAM 1 -->
-        <!-- START FOOTER 3 -->
-        <footer class="py-12 bg-wf-print-bg sm:py-16 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <ul class="flex items-center justify-center mb-9 space-x-3">
-                    <li>
-                        <a href="#" target="_blank" title="" class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
-                            rel="noopener">
-                            <img src="images/social media/instagram-icon-burg.svg" alt="">
-                        </a>
-                    </li>
+        </div>
+    </section>
+    <!-- END TEAM 1 -->
+    <!-- START FOOTER 3 -->
+    <footer class="py-12 bg-wf-print-bg sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <img class="w-auto h-8 mx-auto" src="images/social media/wf-logo-burg.svg" alt="">
 
-                    <li>
-                        <a href="#" target="_blank" title="" class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
-                            rel="noopener">
-                            <img src="images/social media/twitter-icon-burg.svg" alt="">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" target="_blank" title="" class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
-                            rel="noopener">
-                            <img src="images/social media/discord-icon-burg.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
-                <img class="w-auto h-8 mx-auto" src="images/social media/wf-logo-burg.svg" alt="">
-
-                <!-- <ul class="flex flex-wrap items-center justify-center space-x-12 md:space-x-16 mt-14">
+            <ul class="flex flex-wrap items-center justify-center space-x-12 md:space-x-16 mt-14">
                 <li>
                     <a href="#" title="" class="inline-flex text-lg font-medium text-wf-burg transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-70">
                 About
@@ -656,19 +683,67 @@
                 Wearables
               </a>
                 </li>
-            </ul> -->
+            </ul>
 
-
-                <!-- <p class="max-w-md mx-auto mt-12 text-center text-lg lg:text-3xl font-normal text-wf-burg font-rec">
-                Join the Wyld Tribe
-            </p> -->
-
-                <p class="text-base font-normal text-center text-wf-burg opacity-70 mt-7 font-pj">
-                    © Copyright 2022, All Rights Reserved
-                </p>
+            <div class="mt-12">
+                <svg class="w-auto h-4 mx-auto text-wf-burg" viewBox="0 0 172 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)" />
+              <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)" />
+            </svg>
             </div>
-        </footer>
-        <!-- END FOOTER 3 -->
+            <p class="max-w-md mx-auto mt-12 text-center text-lg lg:text-3xl font-normal text-wf-burg font-rec">
+                Join the Wyld Tribe
+            </p>
+            <ul class="flex items-center justify-center mt-9 space-x-3">
+                <li>
+                    <a href="#" target="_blank" title="" class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                        rel="noopener">
+                        <img src="images/instagram-icon-burg.svg" alt="">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" target="_blank" title="" class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                        rel="noopener">
+                        <img src="images/twitter-icon-burg.svg" alt="">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" target="_blank" title="" class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                        rel="noopener">
+                        <img src="images/discord-icon-burg.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <p class="text-base font-normal text-center text-wf-burg opacity-70 mt-7 font-pj">
+                © Copyright 2022, All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    <!-- END FOOTER 3 -->
     </div>
 
 
